@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Embauche {
 
-    private LocalDate debut;
+    public LocalDate debut;
 
     private LocalDate fin;
 

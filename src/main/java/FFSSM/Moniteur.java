@@ -22,8 +22,9 @@ public class Moniteur extends Plongeur {
      * @return l'employeur actuel de ce moniteur sous la forme d'un Optional
      */
     public Optional<Club> employeurActuel() {
-         // TODO: Implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        if (Embauche.debut == false ⎢ Embauche.dateFin == true) {
+        throw new UnsupportedOperationException("Ce moniteur n'est pas employé");
+        }
     }
     
     /**

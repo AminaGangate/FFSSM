@@ -44,7 +44,7 @@ public class Plongee {
 	 */
 	public boolean estConforme() {
 		// TODO: Implémenter cette méthode
-		throw new UnsupportedOperationException("Pas encore implémenté");
+		throw new UnsupportedOperationException("La plongée est conforme");
 	}
 
 }
