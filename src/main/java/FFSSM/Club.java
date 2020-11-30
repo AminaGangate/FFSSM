@@ -8,6 +8,8 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 
 public class Club {
@@ -19,6 +21,8 @@ public class Club {
     public String adresse;
 
     public String telephone;
+
+    private final List<Plongee> lesplongees = new LinkedList<>();
 
     public Club(Moniteur président, String nom, String telephone) {
         this.president = président;
@@ -34,18 +38,22 @@ public class Club {
      * @return l'ensemble des plongées non conformes
      */
     public Set<Plongee> plongeesNonConformes() {
+
         if (Licence.delivrance > LocalDate.plusYears(1)) {
             throw new UnsupportedOperationException("La plongée n'est pas conforme car la licence n'est plus valide");
 
         }
-
+        return null;
+    }
+   
         /**
          * Enregistre une nouvelle plongée organisée par ce club
          *
          * @param p la nouvelle plongée
          */
     public void organisePlongee(Plongee p) {
-        // TODO: Implémenter cette méthode
+        Plongee p = new Plongee(this, p);
+        lesplongees.add(p);
         throw new UnsupportedOperationException("Pas encore implémenté");
     }
 
